@@ -12,6 +12,8 @@ from pathlib import Path, PurePosixPath
 import re
 import sys
 
+SOURCE_URL = 'https://github.com/Sky-Power-Services/adsbiq-mlat-cpp'
+
 
 def verify_bundle(root):
     root = Path(root).resolve(strict=True)
@@ -73,7 +75,10 @@ def main(argv=None):
     root = verify_bundle(Path(__file__).resolve().parent)
     sys.path.insert(0, str(root / 'service'))
     sys.path.insert(0, str(root))
-    from mlat import main as upstream, coordinator, tracker
+    from mlat import main as upstream, coordinator, tracker, config
+    # Preserve the upstream license-offer wording, pointing to the approved
+    # public repository containing this modified server's corresponding source.
+    config.AGPL_SERVER_CODE_URL = SOURCE_URL
     from capture.startup import server_class
     # Match the pinned executable's logging configuration exactly.
     logging.basicConfig(level=logging.DEBUG, style='{',
