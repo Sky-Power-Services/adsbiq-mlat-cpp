@@ -1,0 +1,317 @@
+{
+  "source": "Python 3.12 logging.handlers.RotatingFileHandler, Linux UTF-8",
+  "cases": [
+    {
+      "max_bytes": 12,
+      "backups": 3,
+      "steps": [
+        {
+          "record": "abcd",
+          "reopen": false,
+          "files": {
+            "positions.csv": "abcd\n"
+          }
+        },
+        {
+          "record": "efghi",
+          "reopen": false,
+          "files": {
+            "positions.csv": "abcd\nefghi\n"
+          }
+        },
+        {
+          "record": "j",
+          "reopen": true,
+          "files": {
+            "positions.csv": "j\n",
+            "positions.csv.1": "abcd\nefghi\n"
+          }
+        },
+        {
+          "record": "kkkkkkkkkkkkkkk",
+          "reopen": false,
+          "files": {
+            "positions.csv": "kkkkkkkkkkkkkkk\n",
+            "positions.csv.1": "j\n",
+            "positions.csv.2": "abcd\nefghi\n"
+          }
+        },
+        {
+          "record": "last",
+          "reopen": false,
+          "files": {
+            "positions.csv": "last\n",
+            "positions.csv.1": "kkkkkkkkkkkkkkk\n",
+            "positions.csv.2": "j\n",
+            "positions.csv.3": "abcd\nefghi\n"
+          }
+        },
+        {
+          "record": "abcd",
+          "reopen": false,
+          "files": {
+            "positions.csv": "last\nabcd\n",
+            "positions.csv.1": "kkkkkkkkkkkkkkk\n",
+            "positions.csv.2": "j\n",
+            "positions.csv.3": "abcd\nefghi\n"
+          }
+        },
+        {
+          "record": "efghi",
+          "reopen": false,
+          "files": {
+            "positions.csv": "efghi\n",
+            "positions.csv.1": "last\nabcd\n",
+            "positions.csv.2": "kkkkkkkkkkkkkkk\n",
+            "positions.csv.3": "j\n"
+          }
+        },
+        {
+          "record": "j",
+          "reopen": false,
+          "files": {
+            "positions.csv": "efghi\nj\n",
+            "positions.csv.1": "last\nabcd\n",
+            "positions.csv.2": "kkkkkkkkkkkkkkk\n",
+            "positions.csv.3": "j\n"
+          }
+        },
+        {
+          "record": "kkkkkkkkkkkkkkk",
+          "reopen": false,
+          "files": {
+            "positions.csv": "kkkkkkkkkkkkkkk\n",
+            "positions.csv.1": "efghi\nj\n",
+            "positions.csv.2": "last\nabcd\n",
+            "positions.csv.3": "kkkkkkkkkkkkkkk\n"
+          }
+        },
+        {
+          "record": "last",
+          "reopen": false,
+          "files": {
+            "positions.csv": "last\n",
+            "positions.csv.1": "kkkkkkkkkkkkkkk\n",
+            "positions.csv.2": "efghi\nj\n",
+            "positions.csv.3": "last\nabcd\n"
+          }
+        },
+        {
+          "record": "abcd",
+          "reopen": false,
+          "files": {
+            "positions.csv": "last\nabcd\n",
+            "positions.csv.1": "kkkkkkkkkkkkkkk\n",
+            "positions.csv.2": "efghi\nj\n",
+            "positions.csv.3": "last\nabcd\n"
+          }
+        },
+        {
+          "record": "efghi",
+          "reopen": false,
+          "files": {
+            "positions.csv": "efghi\n",
+            "positions.csv.1": "last\nabcd\n",
+            "positions.csv.2": "kkkkkkkkkkkkkkk\n",
+            "positions.csv.3": "efghi\nj\n"
+          }
+        },
+        {
+          "record": "j",
+          "reopen": false,
+          "files": {
+            "positions.csv": "efghi\nj\n",
+            "positions.csv.1": "last\nabcd\n",
+            "positions.csv.2": "kkkkkkkkkkkkkkk\n",
+            "positions.csv.3": "efghi\nj\n"
+          }
+        },
+        {
+          "record": "kkkkkkkkkkkkkkk",
+          "reopen": false,
+          "files": {
+            "positions.csv": "kkkkkkkkkkkkkkk\n",
+            "positions.csv.1": "efghi\nj\n",
+            "positions.csv.2": "last\nabcd\n",
+            "positions.csv.3": "kkkkkkkkkkkkkkk\n"
+          }
+        },
+        {
+          "record": "last",
+          "reopen": false,
+          "files": {
+            "positions.csv": "last\n",
+            "positions.csv.1": "kkkkkkkkkkkkkkk\n",
+            "positions.csv.2": "efghi\nj\n",
+            "positions.csv.3": "last\nabcd\n"
+          }
+        },
+        {
+          "record": "abcd",
+          "reopen": false,
+          "files": {
+            "positions.csv": "last\nabcd\n",
+            "positions.csv.1": "kkkkkkkkkkkkkkk\n",
+            "positions.csv.2": "efghi\nj\n",
+            "positions.csv.3": "last\nabcd\n"
+          }
+        },
+        {
+          "record": "efghi",
+          "reopen": false,
+          "files": {
+            "positions.csv": "efghi\n",
+            "positions.csv.1": "last\nabcd\n",
+            "positions.csv.2": "kkkkkkkkkkkkkkk\n",
+            "positions.csv.3": "efghi\nj\n"
+          }
+        },
+        {
+          "record": "j",
+          "reopen": false,
+          "files": {
+            "positions.csv": "efghi\nj\n",
+            "positions.csv.1": "last\nabcd\n",
+            "positions.csv.2": "kkkkkkkkkkkkkkk\n",
+            "positions.csv.3": "efghi\nj\n"
+          }
+        },
+        {
+          "record": "kkkkkkkkkkkkkkk",
+          "reopen": false,
+          "files": {
+            "positions.csv": "kkkkkkkkkkkkkkk\n",
+            "positions.csv.1": "efghi\nj\n",
+            "positions.csv.2": "last\nabcd\n",
+            "positions.csv.3": "kkkkkkkkkkkkkkk\n"
+          }
+        },
+        {
+          "record": "last",
+          "reopen": false,
+          "files": {
+            "positions.csv": "last\n",
+            "positions.csv.1": "kkkkkkkkkkkkkkk\n",
+            "positions.csv.2": "efghi\nj\n",
+            "positions.csv.3": "last\nabcd\n"
+          }
+        }
+      ]
+    },
+    {
+      "max_bytes": 10,
+      "backups": 2,
+      "steps": [
+        {
+          "record": "xxxxxxxxx",
+          "reopen": false,
+          "files": {
+            "positions.csv": "xxxxxxxxx\n",
+            "positions.csv.1": ""
+          }
+        },
+        {
+          "record": "y",
+          "reopen": false,
+          "files": {
+            "positions.csv": "y\n",
+            "positions.csv.1": "xxxxxxxxx\n",
+            "positions.csv.2": ""
+          }
+        },
+        {
+          "record": "zzzzzzzzzz",
+          "reopen": true,
+          "files": {
+            "positions.csv": "zzzzzzzzzz\n",
+            "positions.csv.1": "y\n",
+            "positions.csv.2": "xxxxxxxxx\n"
+          }
+        },
+        {
+          "record": "done",
+          "reopen": false,
+          "files": {
+            "positions.csv": "done\n",
+            "positions.csv.1": "zzzzzzzzzz\n",
+            "positions.csv.2": "y\n"
+          }
+        }
+      ]
+    },
+    {
+      "max_bytes": 10,
+      "backups": 2,
+      "steps": [
+        {
+          "record": "\u00e9\u00e9\u00e9\u00e9",
+          "reopen": false,
+          "files": {
+            "positions.csv": "\u00e9\u00e9\u00e9\u00e9\n"
+          }
+        },
+        {
+          "record": "\u00e9",
+          "reopen": false,
+          "files": {
+            "positions.csv": "\u00e9\n",
+            "positions.csv.1": "\u00e9\u00e9\u00e9\u00e9\n"
+          }
+        },
+        {
+          "record": "\ud83d\ude80\ud83d\ude80",
+          "reopen": true,
+          "files": {
+            "positions.csv": "\u00e9\n\ud83d\ude80\ud83d\ude80\n",
+            "positions.csv.1": "\u00e9\u00e9\u00e9\u00e9\n"
+          }
+        },
+        {
+          "record": "tail",
+          "reopen": false,
+          "files": {
+            "positions.csv": "tail\n",
+            "positions.csv.1": "\u00e9\n\ud83d\ude80\ud83d\ude80\n",
+            "positions.csv.2": "\u00e9\u00e9\u00e9\u00e9\n"
+          }
+        },
+        {
+          "record": "a,b\nc",
+          "reopen": false,
+          "files": {
+            "positions.csv": "a,b\nc\n",
+            "positions.csv.1": "tail\n",
+            "positions.csv.2": "\u00e9\n\ud83d\ude80\ud83d\ude80\n"
+          }
+        }
+      ]
+    },
+    {
+      "max_bytes": 1048576,
+      "backups": 10,
+      "steps": [
+        {
+          "record": "one",
+          "reopen": false,
+          "files": {
+            "positions.csv": "one\n"
+          }
+        },
+        {
+          "record": "two",
+          "reopen": false,
+          "files": {
+            "positions.csv": "one\ntwo\n"
+          }
+        },
+        {
+          "record": "three",
+          "reopen": true,
+          "files": {
+            "positions.csv": "one\ntwo\nthree\n"
+          }
+        }
+      ]
+    }
+  ]
+}
