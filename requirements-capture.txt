@@ -1,0 +1,9 @@
+# Tested capture/reference build environment: CPython 3.12, Linux x86-64.
+setuptools==70.3.0
+Cython==3.2.4
+numpy==2.4.3
+scipy==1.17.1
+pykalman==0.11.2
+ujson==5.12.0
+uvloop==0.22.1
+python-graph-core==1.8.2
